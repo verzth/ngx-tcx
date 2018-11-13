@@ -1,4 +1,6 @@
-export declare class TcxNg {
+export declare class TCX {
+    constructor(o:any);
+    init(o:any);
     getAppID():string;
     getAppPass(o:object):string;
     getToken(o:object):string;
