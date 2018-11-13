@@ -1,0 +1,32 @@
+{
+  "name": "verzth-tcx-js-angular",
+  "version": "0.0.1-b",
+  "description": "Angular TCX JS Provider",
+  "main": "tcx-ng.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verzth/tcx-js-angular.git"
+  },
+  "keywords": [
+    "tcx",
+    "tcx-client",
+    "tcx-js",
+    "tcx-ng",
+    "angular",
+    "angular2",
+    "angularjs"
+  ],
+  "author": "Dodi Triwibowo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/verzth/tcx-js-angular/issues"
+  },
+  "homepage": "https://github.com/verzth/tcx-js-angular#readme",
+  "dependencies": {
+    "@angular/core": "^7.0.3",
+    "verzth-tcx-js": "0.0.2"
+  }
+}
