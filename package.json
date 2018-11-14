@@ -1,6 +1,6 @@
 {
   "name": "verzth-tcx-js-angular",
-  "version": "0.0.3",
+  "version": "0.0.3-a",
   "description": "Angular TCX JS Provider",
   "main": "tcx-ng.ts",
   "scripts": {
