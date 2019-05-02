@@ -58,8 +58,13 @@ export class TCX{
     return JSON.parse(crypt.AES.decrypt(val,crypt.enc.Base64.stringify(crypt.enc.Utf8.parse("tcx-js"))).toString(crypt.enc.Utf8));
   }
   setCookie(cookie) {
-    let date: Date = new Date();
-    date.setFullYear(date.getFullYear()+3);
+    let date: Date;
+    if(cookie!=undefined && cookie.expired_at != undefined) {
+      date = new Date(cookie.expired_at);
+    } else {
+      date = new Date();
+      date.setHours(date.getHours()+2);
+    }
     document.cookie = TCX.$_COOKIE_NAME+"="+crypt.AES.encrypt(JSON.stringify(cookie),crypt.enc.Base64.stringify(crypt.enc.Utf8.parse("tcx-js")))+";expires="+date.toUTCString()+";path=/";
   }
 
@@ -89,7 +94,7 @@ export class TCX{
 
   getToken(): Observable<any> {
     return new Observable((observable)=>{
-      if(this.getCookie().token===undefined) {
+      if(this.getCookie().token===undefined || (this.getCookie().expired_at!==undefined && new Date(this.getCookie().expired_at) < new Date())) {
         let cr;
         if(this.options.auth==='time'){
           let time = TCX.getTime();
