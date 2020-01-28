@@ -6,3 +6,5 @@ export interface TCXOption {
   auth : string;
   master_key : string;
 }
+
+export const AUTH_DEFAULT="none", AUTH_PARAM="param", AUTH_TIME="time";

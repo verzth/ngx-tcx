@@ -1,5 +1,6 @@
-[![Release](https://img.shields.io/npm/v/ngx-tcx.svg)](https://jitpack.io/com/github/verzth/tcx-js-angular)
-# tcx-js
+[![Release](https://img.shields.io/npm/v/@verzth/ngx-tcx.svg)](https://www.npmjs.com/package/@verzth/ngx-tcx)
+[![Release](https://img.shields.io/github/v/release/verzth/ngx-tcx)](https://github.com/verzth/ngx-tcx)
+# NGX-TCX
 [Angular](https://angular.io/) Library for [TCX Authentication Module](https://github.com/verzth/tcx), it use in client side to help make auth simpler.
 
 It's standalone library (not include [TCX JS](https://github.com/verzth/tcx-js))
@@ -10,22 +11,22 @@ It's standalone library (not include [TCX JS](https://github.com/verzth/tcx-js))
 
 ### Installation
 NPM
-```
-npm i ngx-tcx
+```bash
+npm i @verzth/ngx-tcx
 ```
 or
-```
-npm i --save ngx-tcx
+```bash
+npm i --save @verzth/ngx-tcx
 ```
 
 Yarn
-```
-yarn add ngx-tcx
+```bash
+yarn add @verzth/ngx-tcx
 ```
 
 ### How to Use:
 1. Use **TCX** in your providers and inject it in your related component constructor.
-   ```
+   ```typescript jsx
    .....
    import {TCX} from 'ngx-tcx';
    .....
@@ -46,7 +47,7 @@ yarn add ngx-tcx
    ```
 
 2. Initialize tcx service with params, it will use default value if you don't provide params.
-   ```
+   ```typescript jsx
        ...
        constructor(tcx: TCX) {
         tcx.init({
@@ -62,6 +63,7 @@ yarn add ngx-tcx
    ```
 3. Available function:
 
+   - getAuth(): string
    - getAppID(): string
    - getAppPass(params: any): string
    - getToken(): Observable<any>

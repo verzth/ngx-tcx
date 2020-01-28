@@ -1,10 +1,10 @@
 {
-  "name": "ngx-tcx",
-  "version": "0.2.1",
+  "name": "@verzth/ngx-tcx",
+  "version": "1.0.0",
   "description": "Angular TCX JS Provider",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/verzth/tcx-js-angular.git"
+    "url": "git+https://github.com/verzth/ngx-tcx.git"
   },
   "keywords": [
     "tcx",
@@ -18,9 +18,9 @@
   "author": "Dodi Triwibowo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/verzth/tcx-js-angular/issues"
+    "url": "https://github.com/verzth/ngx-tcx/issues"
   },
-  "homepage": "https://github.com/verzth/tcx-js-angular#readme",
+  "homepage": "https://github.com/verzth/ngx-tcx#readme",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",

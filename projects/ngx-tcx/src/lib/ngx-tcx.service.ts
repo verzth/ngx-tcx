@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {TCXOption} from "./ngx-tcx.interface";
+import {AUTH_DEFAULT, TCXOption} from "./ngx-tcx.interface";
 import * as crypt from 'crypto-js';
 import * as momentJs from 'moment';
 const moment = momentJs;
@@ -17,7 +17,7 @@ export class TCX{
     app_id : '',
     secret_key : '',
     public_key : '',
-    auth : 'param',
+    auth : AUTH_DEFAULT,
     master_key : ''
   } as TCXOption;
   constructor(private http: HttpClient) {}
@@ -67,6 +67,10 @@ export class TCX{
     }
     document.cookie = TCX.$_COOKIE_NAME+"="+crypt.AES.encrypt(JSON.stringify(cookie),crypt.enc.Base64.stringify(crypt.enc.Utf8.parse("tcx-js")))+";expires="+date.toUTCString()+";path=/";
   }
+
+  getAuth(): string {
+    return this.options.auth;
+  };
 
   getAppID(): string {
     return this.options.app_id;
