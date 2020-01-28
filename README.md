@@ -1,5 +1,5 @@
 [![Release](https://img.shields.io/npm/v/@verzth/ngx-tcx.svg)](https://www.npmjs.com/package/@verzth/ngx-tcx)
-[![Release](https://img.shields.io/github/v/release/verzth/ngx-tcx)](https://github.com/verzth/ngx-tcx)
+[![Release](https://img.shields.io/github/v/tag/verzth/ngx-tcx)](https://github.com/verzth/ngx-tcx)
 # NGX-TCX
 [Angular](https://angular.io/) Library for [TCX Authentication Module](https://github.com/verzth/tcx), it use in client side to help make auth simpler.
 
